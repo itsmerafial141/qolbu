@@ -1,0 +1,62 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Developemt",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--flavor",
+        "development"
+      ]
+    },
+    {
+      "name": "Staging",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--flavor",
+        "staging"
+      ]
+    },
+    {
+      "name": "Production",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--flavor",
+        "production"
+      ]
+    },
+    {
+      "name": "Development Profile",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "args": [
+        "--flavor",
+        "development"
+      ]
+    },
+    {
+      "name": "Staging Profile",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "args": [
+        "--flavor",
+        "staging"
+      ]
+    },
+    {
+      "name": "Production Profile",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "args": [
+        "--flavor",
+        "production"
+      ]
+    },
+  ]
+}
