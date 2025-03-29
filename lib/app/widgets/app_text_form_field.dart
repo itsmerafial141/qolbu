@@ -216,7 +216,6 @@ class AppTextFormField extends StatelessWidget {
       contentInsertionConfiguration: contentInsertionConfiguration,
       statesController: statesController,
       clipBehavior: clipBehavior,
-      scribbleEnabled: scribbleEnabled,
       canRequestFocus: canRequestFocus,
     );
   }

@@ -24,6 +24,7 @@ class AppScaffoldGrdientColor {
 class AppScaffold extends Scaffold {
   final AppScaffoldGrdientColor? backgroundgradientColor;
   final Brightness? statusBarIconBrightness;
+  final SystemUiOverlayStyle? systemUiOverlayStyle;
   const AppScaffold({
     super.key,
     super.appBar,
@@ -52,6 +53,7 @@ class AppScaffold extends Scaffold {
     super.restorationId,
     this.backgroundgradientColor,
     this.statusBarIconBrightness = Brightness.dark,
+    this.systemUiOverlayStyle,
   });
 
   const factory AppScaffold.customAppBar({
@@ -69,20 +71,20 @@ class AppScaffold extends Scaffold {
   @override
   Widget? get body {
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.white,
-        statusBarIconBrightness: statusBarIconBrightness,
-      ),
+      value: systemUiOverlayStyle ??
+          SystemUiOverlayStyle.dark.copyWith(
+            systemNavigationBarColor: Theme.of(Get.context!).scaffoldBackgroundColor,
+            systemNavigationBarDividerColor: Theme.of(Get.context!).scaffoldBackgroundColor,
+          ),
       child: Stack(
         fit: StackFit.expand,
         children: [
           if (backgroundgradientColor != null) _gradientColor,
-          SvgPicture.asset(
-            AppSvg.background,
-            fit: BoxFit.cover,
-            alignment: Alignment.topRight,
-          ),
+          // SvgPicture.asset(
+          //   AppSvg.background,
+          //   fit: BoxFit.cover,
+          //   alignment: Alignment.topRight,
+          // ),
           defaultBody,
         ],
       ),

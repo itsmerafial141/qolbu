@@ -1,0 +1,2 @@
+/Users/rafial/Working/Personal/qolbu/android/app/.cxx/Debug/195mu733/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/rafial/Working/Personal/qolbu/android/app/.cxx/Debug/195mu733/armeabi-v7a/CMakeFiles/rebuild_cache.dir

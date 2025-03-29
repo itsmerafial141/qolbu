@@ -96,3 +96,17 @@ extension WidgetExtension on Widget {
     );
   }
 }
+
+extension TextStyleExtension on TextStyle {
+  double size(String value) {
+    return (TextPainter(
+      text: TextSpan(
+        text: value,
+        style: this,
+      ),
+      maxLines: 1,
+      textDirection: TextDirection.ltr,
+    )..layout())
+        .width;
+  }
+}

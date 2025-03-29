@@ -1,0 +1,685 @@
+[
+    {
+        "id": 1,
+        "latin": "Al-Fatihah",
+        "arabic": "الفاتحة",
+        "arti": "Pembukaan"
+    },
+    {
+        "id": 2,
+        "latin": "Al-Baqarah",
+        "arabic": "البقرة",
+        "arti": "Sapi Betina"
+    },
+    {
+        "id": 3,
+        "latin": "Ali 'Imran",
+        "arabic": "آل عمران",
+        "arti": "Keluarga Imran"
+    },
+    {
+        "id": 4,
+        "latin": "An-Nisa'",
+        "arabic": "النساء",
+        "arti": "Wanita"
+    },
+    {
+        "id": 5,
+        "latin": "Al-Ma'idah",
+        "arabic": "المائدة",
+        "arti": "Hidangan"
+    },
+    {
+        "id": 6,
+        "latin": "Al-An'am",
+        "arabic": "الأنعام",
+        "arti": "Binatang Ternak"
+    },
+    {
+        "id": 7,
+        "latin": "Al-A'raf",
+        "arabic": "الأعراف",
+        "arti": "Tempat Tertinggi"
+    },
+    {
+        "id": 8,
+        "latin": "Al-Anfal",
+        "arabic": "الأنفال",
+        "arti": "Rampasan Perang"
+    },
+    {
+        "id": 9,
+        "latin": "At-Tawbah",
+        "arabic": "التوبة",
+        "arti": "Pengampunan"
+    },
+    {
+        "id": 10,
+        "latin": "Yunus",
+        "arabic": "يونس",
+        "arti": "Nabi Yunus"
+    },
+    {
+        "id": 11,
+        "latin": "Hud",
+        "arabic": "هود",
+        "arti": "Nabi Hud"
+    },
+    {
+        "id": 12,
+        "latin": "Yusuf",
+        "arabic": "يوسف",
+        "arti": "Nabi Yusuf"
+    },
+    {
+        "id": 13,
+        "latin": "Ar-Ra'd",
+        "arabic": "الرعد",
+        "arti": "Guruh"
+    },
+    {
+        "id": 14,
+        "latin": "Ibrahim",
+        "arabic": "إبراهيم",
+        "arti": "Nabi Ibrahim"
+    },
+    {
+        "id": 15,
+        "latin": "Al-Hijr",
+        "arabic": "الحجر",
+        "arti": "Gunung Al-Hijr"
+    },
+    {
+        "id": 16,
+        "latin": "An-Nahl",
+        "arabic": "النحل",
+        "arti": "Lebah"
+    },
+    {
+        "id": 17,
+        "latin": "Al-Isra'",
+        "arabic": "الإسراء",
+        "arti": "Perjalanan Malam"
+    },
+    {
+        "id": 18,
+        "latin": "Al-Kahf",
+        "arabic": "الكهف",
+        "arti": "Goa"
+    },
+    {
+        "id": 19,
+        "latin": "Maryam",
+        "arabic": "مريم",
+        "arti": "Maryam"
+    },
+    {
+        "id": 20,
+        "latin": "Taha",
+        "arabic": "طه",
+        "arti": "Ta Ha"
+    },
+    {
+        "id": 21,
+        "latin": "Al-Anbiya'",
+        "arabic": "الأنبياء",
+        "arti": "Para Nabi"
+    },
+    {
+        "id": 22,
+        "latin": "Al-Hajj",
+        "arabic": "الحج",
+        "arti": "Haji"
+    },
+    {
+        "id": 23,
+        "latin": "Al-Mu’minun",
+        "arabic": "المؤمنون",
+        "arti": "Orang-Orang Mukmin"
+    },
+    {
+        "id": 24,
+        "latin": "An-Nur",
+        "arabic": "النور",
+        "arti": "Cahaya"
+    },
+    {
+        "id": 25,
+        "latin": "Al-Furqan",
+        "arabic": "الفرقان",
+        "arti": "Pembeda"
+    },
+    {
+        "id": 26,
+        "latin": "Asy-Syu'ara'",
+        "arabic": "الشعراء",
+        "arti": "Para Penyair"
+    },
+    {
+        "id": 27,
+        "latin": "An-Naml",
+        "arabic": "النمل",
+        "arti": "Semut"
+    },
+    {
+        "id": 28,
+        "latin": "Al-Qasas",
+        "arabic": "القصص",
+        "arti": "Kisah-Kisah"
+    },
+    {
+        "id": 29,
+        "latin": "Al-Ankabut",
+        "arabic": "العنكبوت",
+        "arti": "Laba-Laba"
+    },
+    {
+        "id": 30,
+        "latin": "Ar-Rum",
+        "arabic": "الروم",
+        "arti": "Bangsa Romawi"
+    }, {
+        "id": 31,
+        "latin": "Luqman",
+        "arabic": "لقمان",
+        "arti": "Luqman"
+    },
+    {
+        "id": 32,
+        "latin": "As-Sajdah",
+        "arabic": "السجدة",
+        "arti": "Sajdah"
+    },
+    {
+        "id": 33,
+        "latin": "Al-Ahzab",
+        "arabic": "الأحزاب",
+        "arti": "Golongan yang Bersekutu"
+    },
+    {
+        "id": 34,
+        "latin": "Saba'",
+        "arabic": "سبإ",
+        "arti": "Kaum Saba"
+    },
+    {
+        "id": 35,
+        "latin": "Fatir",
+        "arabic": "فاطر",
+        "arti": "Sang Pencipta"
+    },
+    {
+        "id": 36,
+        "latin": "Yasin",
+        "arabic": "يس",
+        "arti": "Ya Sin"
+    },
+    {
+        "id": 37,
+        "latin": "As-Saffat",
+        "arabic": "الصافات",
+        "arti": "Barisan-Barisan"
+    },
+    {
+        "id": 38,
+        "latin": "Sad",
+        "arabic": "ص",
+        "arti": "Sad"
+    },
+    {
+        "id": 39,
+        "latin": "Az-Zumar",
+        "arabic": "الزمر",
+        "arti": "Rombongan-Rombongan"
+    },
+    {
+        "id": 40,
+        "latin": "Ghafir",
+        "arabic": "غافر",
+        "arti": "Sang Pengampun"
+    },
+    {
+        "id": 41,
+        "latin": "Fussilat",
+        "arabic": "فصلت",
+        "arti": "Yang Dijelaskan"
+    },
+    {
+        "id": 42,
+        "latin": "Asy-Syura",
+        "arabic": "الشورى",
+        "arti": "Musyawarah"
+    },
+    {
+        "id": 43,
+        "latin": "Az-Zukhruf",
+        "arabic": "الزخرف",
+        "arti": "Perhiasan"
+    },
+    {
+        "id": 44,
+        "latin": "Ad-Dukhan",
+        "arabic": "الدخان",
+        "arti": "Kabut"
+    },
+    {
+        "id": 45,
+        "latin": "Al-Jasiyah",
+        "arabic": "الجاثية",
+        "arti": "Yang Berlutut"
+    },
+    {
+        "id": 46,
+        "latin": "Al-Ahqaf",
+        "arabic": "الأحقاف",
+        "arti": "Bukit Pasir"
+    },
+    {
+        "id": 47,
+        "latin": "Muhammad",
+        "arabic": "محمد",
+        "arti": "Nabi Muhammad"
+    },
+    {
+        "id": 48,
+        "latin": "Al-Fath",
+        "arabic": "الفتح",
+        "arti": "Kemenangan"
+    },
+    {
+        "id": 49,
+        "latin": "Al-Hujurat",
+        "arabic": "الحجرات",
+        "arti": "Kamar-Kamar"
+    },
+    {
+        "id": 50,
+        "latin": "Qaf",
+        "arabic": "ق",
+        "arti": "Qaf"
+    },
+    {
+        "id": 51,
+        "latin": "Az-Zariyat",
+        "arabic": "الذاريات",
+        "arti": "Angin yang Menerbangkan"
+    },
+    {
+        "id": 52,
+        "latin": "At-Tur",
+        "arabic": "الطور",
+        "arti": "Gunung"
+    },
+    {
+        "id": 53,
+        "latin": "An-Najm",
+        "arabic": "النجم",
+        "arti": "Bintang"
+    },
+    {
+        "id": 54,
+        "latin": "Al-Qamar",
+        "arabic": "القمر",
+        "arti": "Bulan"
+    },
+    {
+        "id": 55,
+        "latin": "Ar-Rahman",
+        "arabic": "الرحمن",
+        "arti": "Yang Maha Pengasih"
+    },
+    {
+        "id": 56,
+        "latin": "Al-Waqi'ah",
+        "arabic": "الواقعة",
+        "arti": "Hari Kiamat"
+    },
+    {
+        "id": 57,
+        "latin": "Al-Hadid",
+        "arabic": "الحديد",
+        "arti": "Besi"
+    },
+    {
+        "id": 58,
+        "latin": "Al-Mujadilah",
+        "arabic": "المجادلة",
+        "arti": "Wanita yang Mengajukan Gugatan"
+    },
+    {
+        "id": 59,
+        "latin": "Al-Hasyr",
+        "arabic": "الحشر",
+        "arti": "Pengusiran"
+    },
+    {
+        "id": 60,
+        "latin": "Al-Mumtahanah",
+        "arabic": "الممتحنة",
+        "arti": "Wanita yang Diuji"
+    },
+    {
+        "id": 61,
+        "latin": "As-Saff",
+        "arabic": "الصف",
+        "arti": "Barisan"
+    },
+    {
+        "id": 62,
+        "latin": "Al-Jumu'ah",
+        "arabic": "الجمعة",
+        "arti": "Hari Jumat"
+    },
+    {
+        "id": 63,
+        "latin": "Al-Munafiqun",
+        "arabic": "المنافقون",
+        "arti": "Orang-Orang Munafik"
+    },
+    {
+        "id": 64,
+        "latin": "At-Taghabun",
+        "arabic": "التغابن",
+        "arti": "Hari Ditampakkan Kesalahan"
+    },
+    {
+        "id": 65,
+        "latin": "At-Talaq",
+        "arabic": "الطلاق",
+        "arti": "Perceraian"
+    },
+    {
+        "id": 66,
+        "latin": "At-Tahrim",
+        "arabic": "التحريم",
+        "arti": "Mengharamkan"
+    },
+    {
+        "id": 67,
+        "latin": "Al-Mulk",
+        "arabic": "الملك",
+        "arti": "Kerajaan"
+    },
+    {
+        "id": 68,
+        "latin": "Al-Qalam",
+        "arabic": "القلم",
+        "arti": "Pena"
+    },
+    {
+        "id": 69,
+        "latin": "Al-Haqqah",
+        "arabic": "الحاقة",
+        "arti": "Hari Kiamat"
+    },
+    {
+        "id": 70,
+        "latin": "Al-Ma'arij",
+        "arabic": "المعارج",
+        "arti": "Tempat-Tempat Naik"
+    },
+    {
+        "id": 71,
+        "latin": "Nuh",
+        "arabic": "نوح",
+        "arti": "Nabi Nuh"
+    },
+    {
+        "id": 72,
+        "latin": "Al-Jinn",
+        "arabic": "الجن",
+        "arti": "Jin"
+    },
+    {
+        "id": 73,
+        "latin": "Al-Muzzammil",
+        "arabic": "المزمل",
+        "arti": "Orang yang Berselimut"
+    },
+    {
+        "id": 74,
+        "latin": "Al-Muddathir",
+        "arabic": "المدثر",
+        "arti": "Orang yang Berkemul"
+    },
+    {
+        "id": 75,
+        "latin": "Al-Qiyamah",
+        "arabic": "القيامة",
+        "arti": "Hari Kiamat"
+    },
+    {
+        "id": 76,
+        "latin": "Al-Insan",
+        "arabic": "الإنسان",
+        "arti": "Manusia"
+    },
+    {
+        "id": 77,
+        "latin": "Al-Mursalat",
+        "arabic": "المرسلات",
+        "arti": "Malaikat yang Diutus"
+    },
+    {
+        "id": 78,
+        "latin": "An-Naba'",
+        "arabic": "النبأ",
+        "arti": "Berita Besar"
+    },
+    {
+        "id": 79,
+        "latin": "An-Nazi'at",
+        "arabic": "النازعات",
+        "arti": "Malaikat yang Mencabut"
+    },
+    {
+        "id": 80,
+        "latin": "Abasa",
+        "arabic": "عبس",
+        "arti": "Ia Bermuka Masam"
+    },
+    {
+        "id": 81,
+        "latin": "At-Takwir",
+        "arabic": "التكوير",
+        "arti": "Penggulungan"
+    },
+    {
+        "id": 82,
+        "latin": "Al-Infitar",
+        "arabic": "الإنفطار",
+        "arti": "Terbelah"
+    },
+    {
+        "id": 83,
+        "latin": "Al-Mutaffifin",
+        "arabic": "المطففين",
+        "arti": "Orang-Orang yang Curang"
+    },
+    {
+        "id": 84,
+        "latin": "Al-Insyiqaq",
+        "arabic": "الإنشقاق",
+        "arti": "Terbelah"
+    },
+    {
+        "id": 85,
+        "latin": "Al-Buruj",
+        "arabic": "البروج",
+        "arti": "Gugusan Bintang"
+    },
+    {
+        "id": 86,
+        "latin": "At-Tariq",
+        "arabic": "الطارق",
+        "arti": "Yang Datang di Malam Hari"
+    },
+    {
+        "id": 87,
+        "latin": "Al-A'la",
+        "arabic": "الأعلى",
+        "arti": "Yang Paling Tinggi"
+    },
+    {
+        "id": 88,
+        "latin": "Al-Gasyiyah",
+        "arabic": "الغاشية",
+        "arti": "Hari Pembalasan"
+    },
+    {
+        "id": 89,
+        "latin": "Al-Fajr",
+        "arabic": "الفجر",
+        "arti": "Fajar"
+    },
+    {
+        "id": 90,
+        "latin": "Al-Balad",
+        "arabic": "البلد",
+        "arti": "Negeri"
+    },
+    {
+        "id": 91,
+        "latin": "Asy-Syams",
+        "arabic": "الشمس",
+        "arti": "Matahari"
+    },
+    {
+        "id": 92,
+        "latin": "Al-Lail",
+        "arabic": "الليل",
+        "arti": "Malam"
+    },
+    {
+        "id": 93,
+        "latin": "Ad-Duha",
+        "arabic": "الضحى",
+        "arti": "Waktu Dhuha"
+    },
+    {
+        "id": 94,
+        "latin": "Asy-Syarh",
+        "arabic": "الشرح",
+        "arti": "Melapangkan"
+    },
+    {
+        "id": 95,
+        "latin": "At-Tin",
+        "arabic": "التين",
+        "arti": "Buah Tin"
+    },
+    {
+        "id": 96,
+        "latin": "Al-'Alaq",
+        "arabic": "العلق",
+        "arti": "Segumpal Darah"
+    },
+    {
+        "id": 97,
+        "latin": "Al-Qadr",
+        "arabic": "القدر",
+        "arti": "Kemuliaan"
+    },
+    {
+        "id": 98,
+        "latin": "Al-Bayyinah",
+        "arabic": "البينة",
+        "arti": "Bukti Nyata"
+    },
+    {
+        "id": 99,
+        "latin": "Az-Zalzalah",
+        "arabic": "الزلزلة",
+        "arti": "Goncangan"
+    },
+    {
+        "id": 100,
+        "latin": "Al-'Adiyat",
+        "arabic": "العاديات",
+        "arti": "Kuda Perang yang Berlari Kencang"
+    },
+    {
+        "id": 101,
+        "latin": "Al-Qari'ah",
+        "arabic": "القارعة",
+        "arti": "Hari Kiamat yang Menggetarkan"
+    },
+    {
+        "id": 102,
+        "latin": "At-Takatsur",
+        "arabic": "التكاثر",
+        "arti": "Bermegah-Megahan"
+    },
+    {
+        "id": 103,
+        "latin": "Al-Asr",
+        "arabic": "العصر",
+        "arti": "Masa"
+    },
+    {
+        "id": 104,
+        "latin": "Al-Humazah",
+        "arabic": "الهمزة",
+        "arti": "Pengumpat"
+    },
+    {
+        "id": 105,
+        "latin": "Al-Fil",
+        "arabic": "الفيل",
+        "arti": "Gajah"
+    },
+    {
+        "id": 106,
+        "latin": "Quraisy",
+        "arabic": "قريش",
+        "arti": "Suku Quraisy"
+    },
+    {
+        "id": 107,
+        "latin": "Al-Ma'un",
+        "arabic": "الماعون",
+        "arti": "Barang yang Berguna"
+    },
+    {
+        "id": 108,
+        "latin": "Al-Kausar",
+        "arabic": "الكوثر",
+        "arti": "Nikmat yang Berlimpah"
+    },
+    {
+        "id": 109,
+        "latin": "Al-Kafirun",
+        "arabic": "الكافرون",
+        "arti": "Orang-Orang Kafir"
+    },
+    {
+        "id": 110,
+        "latin": "An-Nasr",
+        "arabic": "النصر",
+        "arti": "Pertolongan"
+    },
+    {
+        "id": 111,
+        "latin": "Al-Lahab",
+        "arabic": "المسد",
+        "arti": "Gejolak Api"
+    },
+    {
+        "id": 112,
+        "latin": "Al-Ikhlas",
+        "arabic": "الإخلاص",
+        "arti": "Ikhlas"
+    },
+    {
+        "id": 113,
+        "latin": "Al-Falaq",
+        "arabic": "الفلق",
+        "arti": "Waktu Subuh"
+    },
+    {
+        "id": 114,
+        "latin": "An-Nas",
+        "arabic": "الناس",
+        "arti": "Manusia"
+    }
+]

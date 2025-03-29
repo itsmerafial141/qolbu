@@ -70,7 +70,7 @@ class DioService {
 
       final dio = Dio(
         BaseOptions(
-          baseUrl: "${customBaseUrl ?? baseUrl}/api",
+          baseUrl: customBaseUrl ?? baseUrl,
           contentType: contentType ?? Headers.formUrlEncodedContentType,
           connectTimeout: Duration(milliseconds: connectTimeout),
           receiveTimeout: Duration(milliseconds: connectTimeout),

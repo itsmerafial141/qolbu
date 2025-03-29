@@ -95,6 +95,11 @@ class Fonts {
     fontWeight: FontWeight.w400,
     color: AppColorSwatch.TEXT,
   );
+  static TextStyle poppinsRegular18 = GoogleFonts.poppins(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColorSwatch.TEXT,
+  );
   static TextStyle poppinsRegular20 = GoogleFonts.poppins(
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
@@ -216,6 +221,11 @@ class Fonts {
   );
   static TextStyle poppinsSemibold16 = GoogleFonts.poppins(
     fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColorSwatch.TEXT,
+  );
+  static TextStyle poppinsSemibold18 = GoogleFonts.poppins(
+    fontSize: 18.sp,
     fontWeight: FontWeight.w600,
     color: AppColorSwatch.TEXT,
   );

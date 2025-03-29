@@ -30,7 +30,7 @@ ThemeData get darkTheme {
 ThemeData get lightTheme {
   return ThemeData(
     brightness: Brightness.light,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Color(0xFFFAFAFA),
     primaryColor: _setColorPrimiaryIsThemeModeDark(false),
     appBarTheme: _appBarTheme(false),
     textTheme: _textTheme(false),
@@ -180,11 +180,14 @@ ElevatedButtonThemeData _elevatedButtonTheme(bool isDark) {
       foregroundColor: AppColor.button.primaryTextColor,
       backgroundColor: AppColor.button.backgroundColor,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.r),
+        borderRadius: BorderRadius.circular(99.r),
       ),
       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
       padding: EdgeInsets.symmetric(vertical: 12.w, horizontal: 16.w),
-      textStyle: Fonts.poppinsBold14.copyWith(height: (20 / 14).sp),
+      textStyle: Fonts.poppinsMedium12.copyWith(
+        height: (20 / 14).sp,
+        color: AppColor.button.primaryTextColor,
+      ),
     ).merge(
       ButtonStyle(
         elevation: WidgetStateProperty.resolveWith<double>(
@@ -331,6 +334,7 @@ AppBarTheme _appBarTheme(bool isDark) {
   return AppBarTheme(
     toolbarHeight: AppDouble.APPBAR_HEIGHT.w,
     backgroundColor: AppColor.SECONDARY,
+    foregroundColor: AppColor.PRIMARY,
     systemOverlayStyle: AppHelper.systemUiOverlayStyle.copyWith(
       statusBarIconBrightness: Brightness.light,
     ),
@@ -341,11 +345,11 @@ AppBarTheme _appBarTheme(bool isDark) {
         ),
       ),
     ),
-    iconTheme: const IconThemeData(color: AppColor.WHITE),
+    iconTheme: const IconThemeData(color: AppColor.PRIMARY),
     elevation: 0,
     toolbarTextStyle: const TextTheme().bodyLarge,
     titleTextStyle: Fonts.poppinsRegular16.copyWith(
-      color: isDark ? AppColor.WHITE : AppColorSwatch.TEXT,
+      color: isDark ? AppColor.WHITE : AppColor.PRIMARY,
     ),
   );
 }

@@ -7,6 +7,12 @@ abstract class Routes {
   static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
   static const ONBOARDING = _Paths.ONBOARDING;
   static const AUTH = _Paths.AUTH;
+  static const NAVIGATION = _Paths.NAVIGATION;
+  static const MEMORIZE = _Paths.MEMORIZE;
+  static const RECITE = _Paths.RECITE;
+  static const RETAIN = _Paths.RETAIN;
+  static const SAVE = _Paths.SAVE;
+  static const SURAH = _Paths.SURAH;
 }
 
 abstract class _Paths {
@@ -15,4 +21,10 @@ abstract class _Paths {
   static const SPLASH_SCREEN = '/splash-screen';
   static const ONBOARDING = '/onboarding';
   static const AUTH = '/auth';
+  static const NAVIGATION = '/navigation';
+  static const MEMORIZE = '/memorize';
+  static const RECITE = '/recite';
+  static const RETAIN = '/retain';
+  static const SAVE = '/save';
+  static const SURAH = '/surah';
 }

@@ -112,18 +112,18 @@ class AppColorSwatch {
     },
   );
   static const MaterialColor PRIMARY = MaterialColor(
-    0xff149D97,
+    0xff18392B,
     <int, Color>{
-      100: Color(0xffF2F7F7),
-      200: Color(0xffE4EFEE),
-      300: Color(0xffC6DDDB),
-      400: Color(0xffA2CAC7),
-      500: Color(0xff73B5B1),
-      600: Color(0xff149D97),
-      700: Color(0xff128C87),
-      800: Color(0xff0F7A75),
-      900: Color(0xff0D6360),
-      1000: Color(0xff094644),
+      50: Color(0xFF244336),
+      100: Color(0xFF2F4D40),
+      200: Color(0xFF466155),
+      300: Color(0xFF5D746B),
+      400: Color(0xFF748880),
+      500: Color(0xFF8C9C95),
+      600: Color(0xFFA3B0AA),
+      700: Color(0xFFBAC4BF),
+      800: Color(0xFFD1D7D5),
+      900: Color(0xFFE8EBEA),
     },
   );
   static const MaterialColor TRANSPARANT = MaterialColor(
@@ -141,13 +141,18 @@ class AppColorSwatch {
     },
   );
   static const MaterialColor SECONDARY = MaterialColor(
-    0xffF4F8FB,
+    0xFFD0DED8,
     <int, Color>{
-      200: Color(0xffD0B3B4),
-      400: Color(0xffD09799),
-      500: Color(0xffD07A7D),
-      600: Color(0xffD05E62),
-      800: Color(0xffD04146),
+      50: Color(0xFFD2E0DA),
+      100: Color(0xFFD5E1DC),
+      200: Color(0xFFD9E5E0),
+      300: Color(0xFFDEE8E4),
+      400: Color(0xFFE3EBE8),
+      500: Color(0xFFE8EFEC),
+      600: Color(0xFFECF2EF),
+      700: Color(0xFFF1F5F3),
+      800: Color(0xFFF6F8F7),
+      900: Color(0xFFFAFCFB),
     },
   );
 }

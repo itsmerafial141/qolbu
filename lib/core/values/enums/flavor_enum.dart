@@ -5,23 +5,33 @@ import 'package:qolbu/core/themes/color_swatch.dart';
 
 enum Flavor {
   DEVELOPMENT(
-    baseUrl: "https://sikhalen.dlabs.id",
+    baseUrl: "https://equran.id/api/v2",
+    name: "Devlopment",
+    bannerName: "Dev",
     baseColor: AppColorSwatch.WARNING,
   ),
   STAGING(
-    baseUrl: "https://sikhalen.dlabs.id",
+    baseUrl: "https://equran.id/api/v2",
+    name: "Staging",
+    bannerName: "Qa",
     baseColor: AppColorSwatch.SUCCESS,
   ),
   PRODUCTION(
-    baseUrl: "http://8.215.61.247:8080",
+    baseUrl: "https://equran.id/api/v2",
+    name: "Production",
+    bannerName: "",
     baseColor: AppColorSwatch.PRIMARY,
   );
 
   final String baseUrl;
   final Color baseColor;
+  final String bannerName;
+  final String name;
 
   const Flavor({
     required this.baseUrl,
+    required this.name,
+    required this.bannerName,
     this.baseColor = Colors.transparent,
   });
 

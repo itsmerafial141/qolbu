@@ -1,0 +1,188 @@
+[
+    {
+        "id": 1,
+        "latin": "Al-Fatihah",
+        "arabic": "الفاتحة",
+        "meaning": "Pembukaan"
+    },
+    {
+        "id": 2,
+        "latin": "Al-Baqarah",
+        "arabic": "البقرة",
+        "meaning": "Sapi Betina"
+    },
+    {
+        "id": 3,
+        "latin": "Ali 'Imran",
+        "arabic": "آل عمران",
+        "meaning": "Keluarga Imran"
+    },
+    {
+        "id": 4,
+        "latin": "An-Nisa'",
+        "arabic": "النساء",
+        "meaning": "Wanita"
+    },
+    {
+        "id": 5,
+        "latin": "Al-Ma'idah",
+        "arabic": "المائدة",
+        "meaning": "Hidangan"
+    },
+    {
+        "id": 6,
+        "latin": "Al-An'am",
+        "arabic": "الأنعام",
+        "meaning": "Hewan Ternak"
+    },
+    {
+        "id": 7,
+        "latin": "Al-A'raf",
+        "arabic": "الأعراف",
+        "meaning": "Tempat yang Tertinggi"
+    },
+    {
+        "id": 8,
+        "latin": "Al-Anfal",
+        "arabic": "الأنفال",
+        "meaning": "Harta Rampasan Perang"
+    },
+    {
+        "id": 9,
+        "latin": "At-Taubah",
+        "arabic": "التوبة",
+        "meaning": "Pengampunan"
+    },
+    {
+        "id": 10,
+        "latin": "Yunus",
+        "arabic": "يونس",
+        "meaning": "Nabi Yunus"
+    },
+    {
+        "id": 11,
+        "latin": "Hud",
+        "arabic": "هود",
+        "meaning": "Nabi Hud"
+    },
+    {
+        "id": 12,
+        "latin": "Yusuf",
+        "arabic": "يوسف",
+        "meaning": "Nabi Yusuf"
+    },
+    {
+        "id": 13,
+        "latin": "Ar-Ra'd",
+        "arabic": "الرعد",
+        "meaning": "Guruh"
+    },
+    {
+        "id": 14,
+        "latin": "Ibrahim",
+        "arabic": "ابراهيم",
+        "meaning": "Nabi Ibrahim"
+    },
+    {
+        "id": 15,
+        "latin": "Al-Hijr",
+        "arabic": "الحجر",
+        "meaning": "Gunung Batu"
+    },
+    {
+        "id": 16,
+        "latin": "An-Nahl",
+        "arabic": "النحل",
+        "meaning": "Lebah"
+    },
+    {
+        "id": 17,
+        "latin": "Al-Isra'",
+        "arabic": "الإسراء",
+        "meaning": "Perjalanan Malam"
+    },
+    {
+        "id": 18,
+        "latin": "Al-Kahf",
+        "arabic": "الكهف",
+        "meaning": "Gua"
+    },
+    {
+        "id": 19,
+        "latin": "Maryam",
+        "arabic": "مريم",
+        "meaning": "Maryam (Maria)"
+    },
+    {
+        "id": 20,
+        "latin": "Ta-Ha",
+        "arabic": "طه",
+        "meaning": "Ta Ha"
+    },
+    {
+        "id": 21,
+        "latin": "Al-Anbiya'",
+        "arabic": "الأنبياء",
+        "meaning": "Para Nabi"
+    },
+    {
+        "id": 22,
+        "latin": "Al-Hajj",
+        "arabic": "الحج",
+        "meaning": "Haji"
+    },
+    {
+        "id": 23,
+        "latin": "Al-Mu’minun",
+        "arabic": "المؤمنون",
+        "meaning": "Orang-Orang Mukmin"
+    },
+    {
+        "id": 24,
+        "latin": "An-Nur",
+        "arabic": "النور",
+        "meaning": "Cahaya"
+    },
+    {
+        "id": 25,
+        "latin": "Al-Furqan",
+        "arabic": "الفرقان",
+        "meaning": "Pembeda"
+    },
+    {
+        "id": 26,
+        "latin": "Asy-Syu’ara'",
+        "arabic": "الشعراء",
+        "meaning": "Para Penyair"
+    },
+    {
+        "id": 27,
+        "latin": "An-Naml",
+        "arabic": "النمل",
+        "meaning": "Semut"
+    },
+    {
+        "id": 28,
+        "latin": "Al-Qasas",
+        "arabic": "القصص",
+        "meaning": "Kisah-Kisah"
+    },
+    {
+        "id": 29,
+        "latin": "Al-‘Ankabut",
+        "arabic": "العنكبوت",
+        "meaning": "Laba-Laba"
+    },
+    {
+        "id": 30,
+        "latin": "Ar-Rum",
+        "arabic": "الروم",
+        "meaning": "Bangsa Romawi"
+    },
+    {
+        "id": 114,
+        "latin": "An-Nas",
+        "arabic": "الناس",
+        "meaning": "Manusia"
+    }
+]

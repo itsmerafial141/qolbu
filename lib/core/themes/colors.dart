@@ -9,6 +9,7 @@ class AppColor {
   static _Button button = _Button();
   static _TextField textField = _TextField();
 
+  static const Color PRIMARY = AppColorSwatch.PRIMARY;
   static const Color SECONDARY = AppColorSwatch.SECONDARY;
   static const Color WHITE = Color.fromARGB(255, 247, 247, 247);
   static const Color INPUT_FILL_COLOR = Colors.white;
@@ -16,6 +17,7 @@ class AppColor {
   static const Color DISABLE = Color(0xFFC8CBCE);
 
   static const Color Olivine = Color(0xffADC178);
+  static const Color RomanSilver = Color(0xff8789A3);
   static const Color Ecru = Color(0xffC1B078);
   static const Color AntiqueBrass = Color(0xffC18C78);
   static const Color Ube = Color(0xff8C78C1);
@@ -42,9 +44,9 @@ class _Background {
 class _Button {
   Color disableBackground = const Color(0xFFF1F5F9);
   Color disablePrimaryTextColor = const Color(0xFFCBD5E1);
-  Color primaryTextColor = const Color(0xFFFFFFFF);
-  Color splashBackgroundColor = const Color(0xFF73B5B1);
-  Color backgroundColor = const Color(0xFF149D97);
+  Color primaryTextColor = AppColor.PRIMARY;
+  Color splashBackgroundColor = AppColor.SECONDARY;
+  Color backgroundColor = AppColor.SECONDARY;
 }
 
 class _TextField {

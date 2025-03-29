@@ -7,34 +7,26 @@ class AppSvg {
 
   static const String ilsComingSoon = "assets/svg/ils_coming_soon.svg";
 
-  static const String background = "assets/svg/background.svg";
+  // static const String background = "assets/svg/background.svg";
 
   static const String icAlert = "assets/svg/alert-circle.svg";
   static const String icArrowBack = "assets/svg/arrow_back.svg";
-  static const String icFlash = "assets/svg/flash_on.svg";
-  static const String icTime = "assets/svg/Frame.svg";
-  static const String icHome = "assets/svg/Home.svg";
   static const String icLocationOutlined = "assets/svg/location_on.svg";
-  static const String iclocationFilled = "assets/svg/location.svg";
   static const String icExit = "assets/svg/login.svg";
   static const String icTimeAdd = "assets/svg/more_time.svg";
-  static const String icNotification = "assets/svg/notifications.svg";
-  static const String icScan = "assets/svg/Scan.svg";
-  static const String icTips = "assets/svg/tips_and_updates.svg";
   static const String icCalendar = "assets/svg/today.svg";
-  static const String icEye = "assets/svg/visibility.svg";
-  static const String icBookmark = "assets/svg/ic_bookmark.svg";
-  static const String icClock = "assets/svg/ic_clock.svg";
-  static const String icUploadFile = "assets/svg/ic_upload_file.svg";
-  static const String icError = "assets/svg/ic_error.svg";
-  static const String icKeyboardArrowDown = "assets/svg/ic_keyboard_arrow_down.svg";
   static const String icDelete = "assets/svg/delete.svg";
-  static const String icPerson = "assets/svg/profile-circle.svg";
 
-  static const String icSupport = "assets/svg/24 Support.svg";
-  static const String icFileEdit = "assets/svg/File Edit 02.svg";
-  static const String icNotificationBing = "assets/svg/Notification Bing.svg";
-  static const String icSecurity = "assets/svg/Security Safe.svg";
-  static const String icTagUser = "assets/svg/Tag User.svg";
-  static const String icPassword = "assets/svg/Password Check.svg";
+  static const String icSplashBG = "assets/svg/splash_bg.svg";
+
+  static const String icMemorize = "assets/svg/ic_memorize.svg";
+  static const String icQuran = "assets/svg/ic_quran.svg";
+  static const String icRecite = "assets/svg/ic_recite.svg";
+  static const String icRetain = "assets/svg/ic_retain.svg";
+  static const String icSave = "assets/svg/ic_save.svg";
+  static const String icSearch = "assets/svg/ic_search.svg";
+  static const String icReadme = "assets/svg/ic_readme.svg";
+  static const String icArabicBorder = "assets/svg/ic_arabic_border.svg";
+
+  static const String ilsQuran = "assets/svg/ils_quran.svg";
 }

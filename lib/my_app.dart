@@ -97,8 +97,8 @@ class _MyAppState extends State<MyApp> {
   Widget _getMaterialAppBuilder(BuildContext context, Widget? child) {
     var data = MediaQuery.of(context);
     return switch (FlavorServices.flavor) {
-      Flavor.DEVELOPMENT => _mediaQuary(data, child, bannerColor: Flavor.DEVELOPMENT.baseColor),
-      Flavor.STAGING => _mediaQuary(data, child, bannerColor: Flavor.STAGING.baseColor),
+      Flavor.DEVELOPMENT => _mediaQuary(data, child),
+      Flavor.STAGING => _mediaQuary(data, child),
       Flavor.PRODUCTION => _mediaQuary(data, child, useBanner: false),
     };
   }
@@ -107,15 +107,16 @@ class _MyAppState extends State<MyApp> {
     MediaQueryData data,
     Widget? child, {
     bool useBanner = true,
-    String bannerMessage = "Dev",
-    Color bannerColor = AppColorSwatch.WARNING,
+    // required Flavor flavor,
+    // String bannerMessage = "Dev",
+    // Color bannerColor = AppColorSwatch.WARNING,
   }) {
     return MediaQuery(
       data: data,
       child: useBanner
           ? Banner(
-              message: connection ? bannerMessage : "Offline",
-              color: connection ? bannerColor : AppColorSwatch.DANGER,
+              message: connection ? FlavorServices.flavor.bannerName : "Offline",
+              color: connection ? FlavorServices.flavor.baseColor : AppColorSwatch.DANGER,
               location: BannerLocation.topEnd,
               child: child,
             )
