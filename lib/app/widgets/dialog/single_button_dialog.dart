@@ -102,7 +102,7 @@ class SingleButtonDialog extends StatelessWidget {
             ),
             25.verticalSpaceFromWidth,
             ElevatedButton(
-              onPressed: onPressed != null ? onPressed! : DialogService.close,
+              onPressed: onPressed != null ? onPressed! : DialogService.instance.close,
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(vertical: 6.w, horizontal: 25.w),
               ),

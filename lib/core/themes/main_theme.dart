@@ -207,11 +207,12 @@ InputDecorationTheme _inputDecorationTheme(bool isDark) {
     iconColor: AppColorSwatch.DISABLE[600],
     isDense: true,
     filled: true,
+    isCollapsed: false,
     fillColor: AppColor.INPUT_FILL_COLOR,
     hintStyle: Fonts.title.mediumRegular16.copyWith(
       color: AppColor.textField.textColor,
     ),
-    labelStyle: Fonts.title.mediumRegular16.copyWith(
+    labelStyle: Fonts.poppinsRegular14.copyWith(
       color: AppColor.textField.textColor,
     ),
     errorStyle: Fonts.poppinsRegular16.copyWith(
@@ -419,29 +420,29 @@ class _OutlinedInputBorder extends InputBorder {
     );
   }
 
-  @override
-  ShapeBorder? lerpFrom(ShapeBorder? a, double t) {
-    if (a is _OutlinedInputBorder) {
-      final _OutlinedInputBorder outline = a;
-      return _OutlinedInputBorder(
-        borderRadius: BorderRadius.lerp(outline.borderRadius, borderRadius, t)!,
-        borderSide: BorderSide.lerp(outline.borderSide, borderSide, t),
-      );
-    }
-    return super.lerpFrom(a, t);
-  }
+  // @override
+  // ShapeBorder? lerpFrom(ShapeBorder? a, double t) {
+  //   if (a is _OutlinedInputBorder) {
+  //     final _OutlinedInputBorder outline = a;
+  //     return _OutlinedInputBorder(
+  //       borderRadius: BorderRadius.lerp(outline.borderRadius, borderRadius, t)!,
+  //       borderSide: BorderSide.lerp(outline.borderSide, borderSide, t),
+  //     );
+  //   }
+  //   return super.lerpFrom(a, t);
+  // }
 
-  @override
-  ShapeBorder? lerpTo(ShapeBorder? b, double t) {
-    if (b is _OutlinedInputBorder) {
-      final _OutlinedInputBorder outline = b;
-      return _OutlinedInputBorder(
-        borderRadius: BorderRadius.lerp(borderRadius, outline.borderRadius, t)!,
-        borderSide: BorderSide.lerp(borderSide, outline.borderSide, t),
-      );
-    }
-    return super.lerpTo(b, t);
-  }
+  // @override
+  // ShapeBorder? lerpTo(ShapeBorder? b, double t) {
+  //   if (b is _OutlinedInputBorder) {
+  //     final _OutlinedInputBorder outline = b;
+  //     return _OutlinedInputBorder(
+  //       borderRadius: BorderRadius.lerp(borderRadius, outline.borderRadius, t)!,
+  //       borderSide: BorderSide.lerp(borderSide, outline.borderSide, t),
+  //     );
+  //   }
+  //   return super.lerpTo(b, t);
+  // }
 
   @override
   Path getInnerPath(Rect rect, {TextDirection? textDirection}) {
@@ -454,13 +455,13 @@ class _OutlinedInputBorder extends InputBorder {
     return Path()..addRRect(borderRadius.resolve(textDirection).toRRect(rect));
   }
 
-  @override
-  void paintInterior(Canvas canvas, Rect rect, Paint paint, {TextDirection? textDirection}) {
-    canvas.drawRRect(borderRadius.resolve(textDirection).toRRect(rect), paint);
-  }
+  // @override
+  // void paintInterior(Canvas canvas, Rect rect, Paint paint, {TextDirection? textDirection}) {
+  //   canvas.drawRRect(borderRadius.resolve(textDirection).toRRect(rect), paint);
+  // }
 
-  @override
-  bool get preferPaintInterior => true;
+  // @override
+  // bool get preferPaintInterior => true;
 
   @override
   void paint(
@@ -477,19 +478,19 @@ class _OutlinedInputBorder extends InputBorder {
     canvas.drawRRect(center, paint);
   }
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) {
-      return true;
-    }
-    if (other.runtimeType != runtimeType) {
-      return false;
-    }
-    return other is _OutlinedInputBorder &&
-        other.borderSide == borderSide &&
-        other.borderRadius == borderRadius;
-  }
+  // @override
+  // bool operator ==(Object other) {
+  //   if (identical(this, other)) {
+  //     return true;
+  //   }
+  //   if (other.runtimeType != runtimeType) {
+  //     return false;
+  //   }
+  //   return other is _OutlinedInputBorder &&
+  //       other.borderSide == borderSide &&
+  //       other.borderRadius == borderRadius;
+  // }
 
-  @override
-  int get hashCode => Object.hash(borderSide, borderRadius);
+  // @override
+  // int get hashCode => Object.hash(borderSide, borderRadius);
 }

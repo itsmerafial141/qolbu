@@ -39,7 +39,7 @@ enum PermissionType {
         return Permission.notification;
       case PermissionType.MEDIA:
         if (Platform.isAndroid) {
-          if (FlavorServices.androidVersion > 32) {
+          if (FlavorServices.instance.androidVersion > 32) {
             return Permission.photos;
           } else {
             return Permission.storage;

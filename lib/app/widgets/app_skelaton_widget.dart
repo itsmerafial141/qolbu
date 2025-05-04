@@ -29,8 +29,8 @@ class Skelaton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height,
-      width: width,
+      height: height?.w,
+      width: width?.w,
       decoration: BoxDecoration(
         color: color ?? AppColorSwatch.DISABLE.shade300,
         borderRadius: BorderRadius.circular(borderRadius ?? 4.r),

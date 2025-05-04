@@ -29,4 +29,7 @@ class AppSvg {
   static const String icArabicBorder = "assets/svg/ic_arabic_border.svg";
 
   static const String ilsQuran = "assets/svg/ils_quran.svg";
+
+  static const String icFacebook = "assets/svg/ic_facebook.svg";
+  static const String icGoogle = "assets/svg/ic_google.svg";
 }

@@ -15,10 +15,10 @@ mixin DocumentFormMixin {
   final Rxn<DocumentFile> document = Rxn();
   Future<void> onTapUploadDocument({FileType type = FileType.any}) async {
     try {
-      DialogService.showLoading();
+      DialogService.instance.showLoading();
       var file = await FilePicker.platform.pickFiles(type: type);
       if (file == null || file.files.isEmpty) {
-        DialogService.closeLoading();
+        DialogService.instance.closeLoading();
         return;
       }
       documentController.text = file.names.firstOrNull ?? "-";
@@ -30,17 +30,17 @@ mixin DocumentFormMixin {
         file: documentEncode,
         fileType: documentType,
       );
-      DialogService.closeLoading();
+      DialogService.instance.closeLoading();
     } catch (e, s) {
-      DialogService.closeLoading();
-      DialogService.showProblem(message: "Terjadi kesalahan");
+      DialogService.instance.closeLoading();
+      DialogService.instance.showProblem(message: "Terjadi kesalahan");
       e.printError(info: "UPLOAD FILE ERROR CONTROLLER");
       s.printError(info: "UPLOAD FILE STACK TRACE CONTROLLER");
     }
   }
 
   Future<void> onTapDeleteDocument() async {
-    await DialogService.showGeneralDialog(
+    await DialogService.instance.showGeneralDialog(
       child: DoubleButtonDialog(
         negativeTextButton: "Tidak",
         positiveTextButton: "Hapus",
@@ -53,7 +53,7 @@ mixin DocumentFormMixin {
         onPressedPositive: () {
           documentController.clear();
           document.value = null;
-          DialogService.close();
+          DialogService.instance.close();
         },
       ),
     );

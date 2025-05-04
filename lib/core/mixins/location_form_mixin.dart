@@ -8,8 +8,8 @@ mixin LocationFormMixin {
   //     position = await LocationService.determinePosition().then((value) {
   //       return value;
   //     }).onError((String error, stackTrace) {
-  //       DialogService.closeLoading();
-  //       DialogService.showProblem(message: error, errorText: stackTrace.toString());
+  //       DialogService.instance.closeLoading();
+  //       DialogService.instance.showProblem(message: error, errorText: stackTrace.toString());
   //       return null;
   //     });
   //   }
@@ -19,8 +19,8 @@ mixin LocationFormMixin {
   //     address = await LocationService.determineAddress().then((value) {
   //       return value;
   //     }).onError((String error, stackTrace) {
-  //       DialogService.closeLoading();
-  //       DialogService.showProblem(message: error, errorText: stackTrace.toString());
+  //       DialogService.instance.closeLoading();
+  //       DialogService.instance.showProblem(message: error, errorText: stackTrace.toString());
   //       return null;
   //     });
   //   }

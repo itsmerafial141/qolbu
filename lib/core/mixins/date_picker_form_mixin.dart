@@ -8,7 +8,7 @@ mixin DatePickerFormMixin {
   final TextEditingController tanggalController = TextEditingController();
 
   Future<void> onTapDatePicker() async {
-    await DialogService.showDialogRangeDatePicker(
+    await DialogService.instance.showDialogRangeDatePicker(
       Get.context!,
       onDatePicker: (dateRange) {
         date.value = dateRange;

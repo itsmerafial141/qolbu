@@ -2,7 +2,18 @@ import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class VersionService {
-  static Future<void> checkVersion({
+  VersionService._();
+  static bool get isRegistered => Get.isRegistered<VersionService>();
+  static VersionService get find {
+    if (isRegistered) return Get.find<VersionService>();
+    return Get.put<VersionService>(VersionService._());
+  }
+
+  static VersionService get instance => find;
+
+  static Future<VersionService> initialize() async => Get.put(VersionService._(), permanent: true);
+
+  Future<void> checkVersion({
     String? flavor,
     required String? localVersion,
     required Function(String? previouesVersion, String currentVersion) onChangedVersion,

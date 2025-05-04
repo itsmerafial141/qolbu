@@ -7,6 +7,8 @@ abstract class Routes {
   static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
   static const ONBOARDING = _Paths.ONBOARDING;
   static const AUTH = _Paths.AUTH;
+  static const LOGIN = _Paths.LOGIN;
+  static const REGISTER = _Paths.REGISTER;
   static const NAVIGATION = _Paths.NAVIGATION;
   static const MEMORIZE = _Paths.MEMORIZE;
   static const RECITE = _Paths.RECITE;
@@ -21,6 +23,8 @@ abstract class _Paths {
   static const SPLASH_SCREEN = '/splash-screen';
   static const ONBOARDING = '/onboarding';
   static const AUTH = '/auth';
+  static const LOGIN = '/login';
+  static const REGISTER = '/register';
   static const NAVIGATION = '/navigation';
   static const MEMORIZE = '/memorize';
   static const RECITE = '/recite';

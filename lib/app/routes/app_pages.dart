@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
+import 'package:qolbu/app/modules/auth/views/login_view.dart';
+import 'package:qolbu/app/modules/auth/views/register_view.dart';
 
 import '../modules/auth/bindings/auth_binding.dart';
-import '../modules/auth/views/auth_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/memorize/bindings/memorize_binding.dart';
@@ -46,8 +47,14 @@ class AppPages {
       transition: Transition.rightToLeft,
     ),
     GetPage(
-      name: _Paths.AUTH,
-      page: () => const AuthView(),
+      name: _Paths.REGISTER,
+      page: () => const RegisterView(),
+      binding: AuthBinding(),
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
       binding: AuthBinding(),
       transition: Transition.rightToLeft,
     ),

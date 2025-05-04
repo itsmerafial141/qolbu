@@ -59,7 +59,7 @@ class SurahController extends GetxController with StateMixin<List<SurahModel>> {
       surah.removeRange(0, 20);
     }).onError((BaseResponse error, stackTrace) {
       change(null, status: RxStatus.error());
-      DialogService.showProblem(
+      DialogService.instance.showProblem(
         message: error.message,
         errorText: error.curl,
       );

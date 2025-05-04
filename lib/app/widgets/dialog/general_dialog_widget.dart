@@ -95,7 +95,7 @@ class GeneralDialog extends StatelessWidget {
             _errorWidget,
             25.verticalSpaceFromWidth,
             ElevatedButton(
-              onPressed: onPressed != null ? onPressed! : DialogService.close,
+              onPressed: onPressed != null ? onPressed! : DialogService.instance.close,
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(vertical: 6.w, horizontal: 25.w),
               ),
@@ -159,7 +159,7 @@ class _ErrorGeneralDialog extends GeneralDialog {
 
   @override
   Widget get _errorWidget {
-    if (!FlavorServices.flavor.isDevelopment || errorText == null) return const SizedBox();
+    if (!FlavorServices.instance.flavor.isDevelopment || errorText == null) return const SizedBox();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

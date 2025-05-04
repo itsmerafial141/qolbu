@@ -81,7 +81,8 @@ class DoubleButtonDialog extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ElevatedButton(
-                onPressed: onPressedNegative != null ? onPressedNegative! : DialogService.close,
+                onPressed:
+                    onPressedNegative != null ? onPressedNegative! : DialogService.instance.close,
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 6.w, horizontal: 25.w),
                   backgroundColor: AppColorSwatch.PRIMARY.shade200,
@@ -96,7 +97,8 @@ class DoubleButtonDialog extends StatelessWidget {
               ),
               8.horizontalSpace,
               ElevatedButton(
-                onPressed: onPressedPositive != null ? onPressedPositive! : DialogService.close,
+                onPressed:
+                    onPressedPositive != null ? onPressedPositive! : DialogService.instance.close,
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 6.w, horizontal: 25.w),
                 ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:qolbu/app/controllers/user_controller.dart';
 import 'package:qolbu/app/modules/home/components/juz_component.dart';
 import 'package:qolbu/app/modules/home/components/surah_component.dart';
 import 'package:qolbu/app/routes/app_pages.dart';
@@ -7,6 +9,8 @@ import 'package:qolbu/app/routes/app_pages.dart';
 class HomeController extends GetxController with GetSingleTickerProviderStateMixin {
   static bool get isRegistered => Get.isRegistered();
   static HomeController get find => isRegistered ? Get.find() : Get.put(HomeController());
+
+  final RefreshController refreshController = RefreshController();
 
   late final TabController tabController;
   late final PageController tabPageController;
@@ -29,7 +33,13 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
     super.onReady();
   }
 
-  void _initializeApi() async {}
+  void _initializeApi() async {
+    Future.wait([
+      UserController.find.initializeApi(),
+    ]).whenComplete(() {
+      refreshController.refreshCompleted();
+    });
+  }
 
   void _initializeData() {
     tabController = TabController(length: tabs.length, vsync: this);
@@ -50,6 +60,13 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
     Get.toNamed(Routes.SURAH);
   }
 
-  void onTapSeeAllJuz() {
+  void onTapSeeAllJuz() {}
+
+  void onTapHeader() {
+    Get.toNamed(Routes.LOGIN);
+  }
+
+  void onRefresh() {
+    _initializeApi();
   }
 }

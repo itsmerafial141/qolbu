@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:qolbu/app/data/models/auth_model.dart';
+import 'package:qolbu/app/data/models/user_model.dart';
 import 'package:qolbu/core/values/consts/hive_box_const.dart';
 import 'package:qolbu/core/values/keys/hive_box_name_key.dart';
 
@@ -16,7 +18,12 @@ mixin HiveService implements HiveBox {
   }
 
   static Future<void> _initializeAdpter() async {
-    // if (!Hive.isAdapterRegistered(AuthAdapter().typeId)) Hive.registerAdapter(AuthAdapter());
+    if (!Hive.isAdapterRegistered(AuthModelAdapter().typeId)) {
+      Hive.registerAdapter(AuthModelAdapter());
+    }
+    if (!Hive.isAdapterRegistered(UserModelAdapter().typeId)) {
+      Hive.registerAdapter(UserModelAdapter());
+    }
   }
 
   static Future<void> _initializeBox() async {

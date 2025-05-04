@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:qolbu/core/themes/colors.dart';
 import 'package:qolbu/core/themes/fonts.dart';
 
@@ -222,7 +221,7 @@ class AppTextFormField extends StatelessWidget {
 
   TextStyle? get _style =>
       style ??
-      Fonts.title.mediumRegular16.copyWith(
+      Fonts.title.smallRegular14.copyWith(
         color: AppColor.textField.textInput,
       );
 
@@ -242,10 +241,6 @@ class AppTextFormField extends StatelessWidget {
         height: 1.w,
       ),
       suffixIconConstraints: suffixIconConstraints ?? BoxConstraints(minWidth: 52.w),
-      contentPadding: contentPadding ??
-          Theme.of(Get.context!).inputDecorationTheme.contentPadding?.subtract(
-                const EdgeInsets.only(left: 16),
-              ),
       prefixIconConstraints: prefixIconConstraints ?? BoxConstraints(minWidth: 16.w),
       prefixIcon: prefixIcon ?? const SizedBox(),
     );

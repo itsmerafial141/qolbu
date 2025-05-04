@@ -21,7 +21,7 @@ class ProfileAvatar extends StatelessWidget {
         return CircleAvatar(
           radius: radius,
           backgroundColor: AppColorSwatch.DISABLE,
-          foregroundImage: NetworkImage(data?.picture?.firstOrNull?.path ?? ""),
+          // foregroundImage: NetworkImage(data?.picture?.firstOrNull?.path ?? ""),
           onForegroundImageError: (exception, stackTrace) {},
           child: Icon(
             Icons.person_outline_rounded,

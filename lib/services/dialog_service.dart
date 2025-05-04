@@ -10,20 +10,30 @@ import 'package:qolbu/core/themes/color_swatch.dart';
 import 'package:qolbu/core/themes/main_theme.dart';
 import 'package:qolbu/core/values/consts/svg_asset_const.dart';
 import 'package:qolbu/core/values/enums/flavor_enum.dart';
-import 'package:qolbu/services/dio/dio_service.dart';
 import 'package:qolbu/services/flavor_service.dart';
 
-class DialogService extends DioService {
-  static void closeLoading() {
+class DialogService {
+  DialogService._();
+  static bool get isRegistered => Get.isRegistered<DialogService>();
+  static DialogService get find {
+    if (isRegistered) return Get.find<DialogService>();
+    return Get.put<DialogService>(DialogService._());
+  }
+
+  static DialogService get instance => find;
+
+  static Future<DialogService> initialize() async => Get.put(DialogService._(), permanent: true);
+
+  void closeLoading() {
     close();
   }
 
-  static void close() {
+  void close() {
     if (Get.isSnackbarOpen) Get.close(1);
     if (Get.isDialogOpen ?? false) Get.back();
   }
 
-  static showDialogDatePicker(
+  void showDialogDatePicker(
     BuildContext context, {
     required Function(DateTime datetime) onDatePicker,
   }) async {
@@ -42,7 +52,7 @@ class DialogService extends DioService {
     }
   }
 
-  static Future showDialogRangeDatePicker(
+  Future<void> showDialogRangeDatePicker(
     BuildContext context, {
     required Function(DateTimeRange dateRange) onDatePicker,
   }) async {
@@ -85,54 +95,17 @@ class DialogService extends DioService {
       },
       transitionDuration: const Duration(milliseconds: 200),
       barrierDismissible: true,
-
-      // selectableDayPredicate: (dateTime) {
-      //   // Disable 25th Feb 2023
-      //   if (dateTime == DateTime(2023, 2, 25)) {
-      //     return false;
-      //   } else {
-      //     return true;
-      //   }
-      // },
     );
-
-    // var datetime = await showDateRangePicker(
-    //   context: context,
-    //   initialDateRange: DateTimeRange(
-    //     start: DateTime.now(),
-    //     end: DateTime.now().add(const Duration(days: 1)),
-    //   ),
-    //   firstDate: DateTime.now().subtract(const Duration(days: 36500)),
-    //   lastDate: DateTime.now().add(const Duration(days: 36500)),
-    //   confirmText: "Simpan",
-    //   cancelText: "Batal",
-    //   locale: Get.locale,
-    //   builder: (context, child) {
-    //     return Theme(
-    //       data: Theme.of(context).copyWith(
-    //         appBarTheme: Theme.of(context).appBarTheme.copyWith(
-    //               backgroundColor: AppColorSwatch.PRIMARY,
-    //               iconTheme: Theme.of(context).appBarTheme.iconTheme!.copyWith(color: Colors.white),
-    //             ),
-    //         colorScheme: const ColorScheme.light(
-    //           onPrimary: Colors.white,
-    //           primary: AppColorSwatch.PRIMARY,
-    //         ),
-    //       ),
-    //       child: child!,
-    //     );
-    //   },
-    // );
 
     if (dateTimeList == null) return;
     var datetime = DateTimeRange(start: dateTimeList.first, end: dateTimeList.last);
     onDatePicker(datetime);
   }
 
-  static showLoading({
+  void showLoading({
     bool barrierDismissible = false,
   }) {
-    close();
+    DialogService.instance.close();
     Get.dialog(
       AppLoading(barrierDismissible: barrierDismissible),
       barrierDismissible: barrierDismissible,
@@ -142,12 +115,12 @@ class DialogService extends DioService {
     );
   }
 
-  static Future showGeneralDialog({
+  Future<T?> showGeneralDialog<T>({
     bool barrierDismissible = false,
     Widget? child,
   }) async {
-    close();
-    await Get.dialog(
+    DialogService.instance.close();
+    return Get.dialog<T>(
       PopScope(
         canPop: kDebugMode ? true : barrierDismissible,
         child: Center(
@@ -169,7 +142,7 @@ class DialogService extends DioService {
     );
   }
 
-  static showProblem({
+  Future<T?> showProblem<T>({
     void Function()? onPressed,
     String textButton = "Kembali",
     String icon = AppSvg.icAlert,
@@ -179,8 +152,8 @@ class DialogService extends DioService {
     IconDecoration? iconDecoration,
     bool barrierDismissible = false,
   }) {
-    DialogService.closeLoading();
-    showGeneralDialog(
+    DialogService.instance.close();
+    return showGeneralDialog<T>(
       barrierDismissible: barrierDismissible,
       child: GeneralDialog.error(
         icon: icon,
@@ -194,7 +167,7 @@ class DialogService extends DioService {
     );
   }
 
-  static showGeneral({
+  Future<T?> showGeneral<T>({
     bool barrierDismissible = false,
     int? errorCode,
     Widget? child,
@@ -203,8 +176,8 @@ class DialogService extends DioService {
     required String title,
     required String description,
   }) {
-    DialogService.closeLoading();
-    showGeneralDialog(
+    DialogService.instance.close();
+    return showGeneralDialog<T>(
       barrierDismissible: barrierDismissible,
       child: GeneralDialog(
         textButton: textButton,
@@ -215,29 +188,30 @@ class DialogService extends DioService {
     );
   }
 
-  static showNoInternetConnection({
+  Future<T?> showNoInternetConnection<T>({
     int? errorCode,
     String label = "Tidak Ada Koneksi Internet",
     String? textDescriptions =
         "Pastikan anda mengaktifkan koneksi internet untuk menggunakan aplikasi.",
     String textButton = "Kembali",
-    Function()? onPressed,
+    void Function()? onPressed,
   }) {
-    DialogService.closeLoading();
-    showGeneralDialog(
+    DialogService.instance.close();
+    return showGeneralDialog<T>(
       child: GeneralDialog(
         textButton: textButton,
         onPressed: onPressed != null
             ? () {
-                close();
+                DialogService.instance.close();
                 onPressed();
               }
-            : () => close(),
+            : () => DialogService.instance.close(),
         label: label,
         textDescriptions: [
           TextDescription(
-              text:
-                  "${FlavorServices.flavor != Flavor.PRODUCTION && errorCode != null ? "[$errorCode] " : ""} $textDescriptions")
+            text:
+                "${FlavorServices.instance.flavor != Flavor.PRODUCTION && errorCode != null ? "[$errorCode] " : ""} $textDescriptions",
+          )
         ],
       ),
     );

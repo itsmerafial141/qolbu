@@ -5,8 +5,8 @@ import 'package:qolbu/core/values/enums/feature_enum.dart';
 class EndPoints {
   static const String login = "/auth/login";
   static const String logout = "/auth/logout";
-  static const String refreshToken = "/auth/refresh-token";
-  static const String me = "/me";
+  static const String refreshToken = "/auth/refresh";
+  static const String user = "/user";
   static const String changePassword = "/me/update";
   static const String homepage = "/homepage";
   static const String calendar = "/calendar";

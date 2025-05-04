@@ -5,7 +5,19 @@ import 'package:qolbu/app/widgets/dialog/double_button_dialog_widget.dart';
 import 'package:qolbu/services/dialog_service.dart';
 
 class PermissionService {
-  static Future<void> checkPermisison(
+  PermissionService._();
+  static bool get isRegistered => Get.isRegistered<PermissionService>();
+  static PermissionService get find {
+    if (isRegistered) return Get.find<PermissionService>();
+    return Get.put<PermissionService>(PermissionService._());
+  }
+
+  static PermissionService get instance => find;
+
+  static Future<PermissionService> initialize() async =>
+      Get.put(PermissionService._(), permanent: true);
+
+  Future<void> checkPermisison(
     Permission permission,
     String title,
     String description, {
@@ -21,19 +33,18 @@ class PermissionService {
       onGranted(PermissionStatus.granted);
       return;
     }
-    await DialogService.showGeneralDialog(
+    await DialogService.instance.showGeneralDialog(
       child: DoubleButtonDialog(
         label: description,
-        // description: description,
         icon: '',
         positiveTextButton: "Beri Izin",
         negativeTextButton: "Jangan",
         onPressedNegative: () {
           onDenied(PermissionStatus.denied);
-          DialogService.close();
+          DialogService.instance.close();
         },
         onPressedPositive: () async {
-          DialogService.close();
+          DialogService.instance.close();
           await _checkStatus(
             permission,
             onDenied,
@@ -49,7 +60,7 @@ class PermissionService {
     );
   }
 
-  static Future<void> _checkStatus(
+  Future<void> _checkStatus(
     Permission permission,
     void Function(PermissionStatus status) onDenied,
     void Function(PermissionStatus status) onGranted,

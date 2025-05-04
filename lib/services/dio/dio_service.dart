@@ -1,20 +1,15 @@
+import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
+import 'package:dio_cookie_manager/dio_cookie_manager.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:get/route_manager.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:qolbu/core/values/enums/method_enum.dart';
-import 'package:qolbu/services/dio/inteceptors/dio_inteceptor.dart';
+import 'package:qolbu/services/dio/inteceptors/refresh_token_inteceptor.dart';
 import 'package:qolbu/services/dio/inteceptors/retry_interceptor.dart';
+import 'package:qolbu/services/dio/inteceptors/sentry_interceptor.dart';
+import 'package:qolbu/services/dio/inteceptors/token_interceptor.dart';
 import 'package:qolbu/services/flavor_service.dart';
-
-class InterceptorOption {
-  final bool useHeader;
-  final bool useRefreshToken;
-  final bool useRetry;
-
-  const InterceptorOption({
-    this.useHeader = true,
-    this.useRefreshToken = true,
-    this.useRetry = true,
-  });
-}
 
 class DioRequest {
   final String url;
@@ -39,58 +34,53 @@ class DioRequest {
 }
 
 class DioService {
-  static String get baseUrl => FlavorServices.flavor.baseUrl;
+  DioService._();
 
-  static late DioRequest _request;
+  static bool get isRegistered => Get.isRegistered<DioService>();
+  static DioService get find {
+    if (isRegistered) return Get.find<DioService>();
+    return Get.put<DioService>(DioService._());
+  }
 
-  static Future<Response> call(
-    String url, {
+  static DioService get instance => find;
+
+  late final Dio _dio;
+  late final CookieJar cookieJar;
+  Dio get api => instance._dio;
+
+  static Future<void> initialize({
     String? customBaseUrl,
-    Method method = Method.POST,
-    Map<String, dynamic>? request,
-    Map<String, String>? header,
-    Map<String, dynamic>? queryParameters,
-    bool useFormData = false,
-    bool useToken = true,
-    int connectTimeout = 30000,
     String? contentType = Headers.jsonContentType,
-    InterceptorOption? interceptorOption,
+  }) async {
+    Get.put(DioService._(), permanent: true);
+    instance._dio = Dio(
+      BaseOptions(
+        baseUrl: customBaseUrl ?? FlavorServices.instance.flavor.baseUrl,
+        contentType: contentType ?? Headers.formUrlEncodedContentType,
+        connectTimeout: Duration(milliseconds: 30000),
+        receiveTimeout: Duration(milliseconds: 30000),
+      ),
+    );
+    final appDocDir = await getApplicationDocumentsDirectory();
+    instance.cookieJar = PersistCookieJar(
+      storage: FileStorage('${appDocDir.path}/.cookies/'),
+    );
+
+    instance._dio.interceptors.add(CookieManager(instance.cookieJar));
+    instance._dio.interceptors.add(RefreshTokenInterceptor());
+    instance._dio.interceptors.add(TokenInterceptor());
+    instance._dio.interceptors.add(RetryOnConnectionChangeInterceptor());
+    instance._dio.interceptors.add(SentryInterceptor());
+  }
+
+  Dio call({
+    String? baseUrl,
+    bool useToken = false,
   }) {
     try {
-      _request = DioRequest(
-        url,
-        header: header,
-        method: method,
-        request: request,
-        useFormData: useFormData,
-        useToken: useToken,
-        connectTimeout: connectTimeout,
-        contentType: contentType,
-      );
-
-      final dio = Dio(
-        BaseOptions(
-          baseUrl: customBaseUrl ?? baseUrl,
-          contentType: contentType ?? Headers.formUrlEncodedContentType,
-          connectTimeout: Duration(milliseconds: connectTimeout),
-          receiveTimeout: Duration(milliseconds: connectTimeout),
-        ),
-      );
-      var iOption = interceptorOption ?? const InterceptorOption();
-      if (iOption.useHeader) dio.interceptors.add(HeaderInterceptor(request: _request));
-      // if (iOption.useRefreshToken) dio.interceptors.add(RefreshTokenInterceptor(dio: dio));
-      if (iOption.useRetry) dio.interceptors.add(RetryOnConnectionChangeInterceptor(dio: dio));
-
-      switch (method) {
-        case Method.GET:
-          return dio.get(url, data: request, queryParameters: queryParameters);
-        case Method.PUT:
-          return dio.put(url, data: request);
-        case Method.DELETE:
-          return dio.delete(url, data: request);
-        default:
-          return dio.post(url, data: request);
-      }
+      instance._dio.options.baseUrl = baseUrl ?? FlavorServices.instance.flavor.baseUrl;
+      if (!useToken) instance._dio.options.headers.remove("Authorization");
+      return _dio;
     } on DioException catch (_) {
       rethrow;
     } catch (_) {

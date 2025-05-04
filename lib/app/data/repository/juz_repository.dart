@@ -1,7 +1,6 @@
 import 'package:qolbu/app/data/models/juz_model.dart';
 import 'package:qolbu/app/data/models/response/base_raseponse.dart';
 import 'package:qolbu/core/values/enums/edition_enum.dart';
-import 'package:qolbu/core/values/enums/method_enum.dart';
 import 'package:qolbu/services/dio/dio_service.dart';
 
 class JuzRepository {
@@ -12,10 +11,9 @@ class JuzRepository {
     int limit = 20,
   }) async {
     try {
-      var response = await DioService.call(
+      var api = DioService.instance.call(baseUrl: 'https://api.alquran.cloud/v1');
+      var response = await api.get(
         '/juz/$juz/${edition.id}',
-        customBaseUrl: 'https://api.alquran.cloud/v1',
-        method: Method.GET,
         queryParameters: {
           "offset": offset,
           "limit": limit,

@@ -68,10 +68,10 @@ class BaseResponse<T> {
       message: (response?.data is Map)
           ? response?.data["message"] ??
               ((response?.data["detail"] is Map)
-                  ? response?.data["detail"] ?? FlavorServices.flavor.isProduction
+                  ? response?.data["detail"] ?? FlavorServices.instance.flavor.isProduction
                       ? "Terjadi Kesalahan"
                       : response?.statusMessage
-                  : FlavorServices.flavor.isProduction
+                  : FlavorServices.instance.flavor.isProduction
                       ? "Terjadi Kesalahan"
                       : response?.statusMessage)
           : isSuccess
